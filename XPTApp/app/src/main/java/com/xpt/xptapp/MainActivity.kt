@@ -14,6 +14,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.xpt.xptapp.ui.theme.XPTAppTheme
 
 class MainActivity : ComponentActivity() {
+
+    //mdp supabase CU#h_ev-g*VYM73
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
