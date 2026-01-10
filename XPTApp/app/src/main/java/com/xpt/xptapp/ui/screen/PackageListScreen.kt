@@ -4,8 +4,11 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.QrCodeScanner
+import androidx.compose.material3.BottomAppBar
+import androidx.compose.material3.BottomAppBarDefaults
 import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.FloatingActionButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
@@ -23,20 +26,50 @@ import androidx.compose.ui.tooling.preview.Devices
 fun PackageListScreen(navController: NavController,
     viewModel: PackageListViewModel = viewModel()
 ) {
-    Scaffold { paddingValues ->
+    Scaffold(
+        bottomBar = {
+            BottomAppBar(
+                actions = {
+                    /*IconButton(onClick = { /* do something */ }) {
+                        Icon(Icons.Filled.Check, contentDescription = "Localized description")
+                    }
+                    IconButton(onClick = { /* do something */ }) {
+                        Icon(
+                            Icons.Filled.Edit,
+                            contentDescription = "Localized description",
+                        )
+                    }
+                    IconButton(onClick = { /* do something */ }) {
+                        Icon(
+                            Icons.Filled.Mic,
+                            contentDescription = "Localized description",
+                        )
+                    }
+                    IconButton(onClick = { /* do something */ }) {
+                        Icon(
+                            Icons.Filled.Image,
+                            contentDescription = "Localized description",
+                        )
+                    }*/
+                },
+                floatingActionButton = {
+                    FloatingActionButton(
+                        onClick = { navController.navigate(Screen.BarcodeScanning.route) },
+                        containerColor = BottomAppBarDefaults.bottomAppBarFabColor,
+                        elevation = FloatingActionButtonDefaults.bottomAppBarFabElevation()
+                    ) {
+                        Icon(Icons.Filled.QrCodeScanner, "Localized description")
+                    }
+                }
+            )
+        }
+    ) { paddingValues ->
         Box(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues),
             contentAlignment = Alignment.Center
         ) {
-            FloatingActionButton(
-                onClick = {
-                    navController.navigate(Screen.BarcodeScanning.route)
-                }
-            ) {
-                Icon(Icons.Default.Add, contentDescription = "Add")
-            }
         }
     }
 }
