@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -13,11 +15,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.XPTApp">
-        <activity
-            android:name=".BarcodeScanningActivity"
-            android:exported="false"
-            android:label="@string/title_activity_barcode_scanning"
-            android:theme="@style/Theme.XPTApp" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
