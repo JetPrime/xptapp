@@ -16,10 +16,13 @@ activityCompose = "1.12.2"
 composeBom = "2025.12.01"
 lifecycleViewmodelCompose = "2.10.0"
 glance = "1.1.1"
+materialIconsExtended = "1.7.8"
 navigationCompose = "2.9.6"
 material3 = "1.4.0"
+material = "1.10.0"
 
 [libraries]
+androidx-compose-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "materialIconsExtended" }
 androidx-glance-appwidget = { group = "androidx.glance", name = "glance-appwidget", version.ref = "glance" }
 androidx-glance-material3 = { group = "androidx.glance", name = "glance-material3", version.ref = "glance" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -45,6 +48,7 @@ ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx
 ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktorClientContentNegotiation" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
+androidx-material = { group = "androidx.compose.material", name = "material", version.ref = "material"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
